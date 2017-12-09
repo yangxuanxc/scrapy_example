@@ -66,10 +66,14 @@ ROBOTSTXT_OBEY = True
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
 #    'matplotlib_examples.pipelines.MatplotlibExamplesPipeline': 300,
-    'scrapy.pipelines.files.FilesPipeline': 1,
+    #'scrapy.pipelines.files.FilesPipeline': 1,
+     'matplotlib_examples.pipelines.MotplotlibFilesPipeLine': 1,
 }
-
+#下载的文件的路径
 FILES_STORE = 'example_src'
+#输出文件路径
+FEED_URI = 'export_date/books.json'
+FEED_FORMAT = 'json'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
