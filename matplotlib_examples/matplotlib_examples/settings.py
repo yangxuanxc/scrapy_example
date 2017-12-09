@@ -64,10 +64,12 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
+ITEM_PIPELINES = {
 #    'matplotlib_examples.pipelines.MatplotlibExamplesPipeline': 300,
-#}
+    'scrapy.pipelines.files.FilesPipeline': 1,
+}
 
+FILES_STORE = 'example_src'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
